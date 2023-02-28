@@ -53,8 +53,8 @@ float fishY() {
 }
 
 float depthCollision(float ySpeed) {
-  if ((RangeFront.distance(mm) < stopRange && ySpeed > 0) ||
-      (RangeBack.distance(mm) < stopRange && ySpeed < 0)) {
+  if ((RangeFront.distance(mm) < stopRange && ySpeed > 0) /*||
+      (RangeBack.distance(mm) < stopRange && ySpeed < 0)*/) {
     return 0;
   }
   // set speed to 0 if within 10cm of wall
@@ -66,10 +66,10 @@ float depthCollision(float ySpeed) {
   // if front gets within the collision distance, the speed gets slower as it
   // approaches.
 
-  else if (ySpeed < 0 && RangeBack.distance(mm) <= collisionRange) {
+  /*else if (ySpeed < 0 && RangeBack.distance(mm) <= collisionRange) {
 
     return ySpeed * (map(RangeBack.distance(mm), 0, collisionRange, 0, 1));
-  }
+  }*/
   // if back gets within the collision distance, the speed gets slower as it
   // approaches.
 
