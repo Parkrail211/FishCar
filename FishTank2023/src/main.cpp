@@ -28,7 +28,7 @@
 using namespace vex;
 int collisionRange = 300;
 int stopRange = 200;
-int maxSpeed = 2;
+int maxSpeed = 25;
 float incrementAmount = 0.5;
 float xSpeed = 0;
 float ySpeed = 0;
@@ -120,8 +120,6 @@ int main() {
     } else if (ySpeed > fishY()) {
       ySpeed = ySpeed - incrementAmount;
     }
-
-    
 
     MotorsHorizontal.setVelocity(xSpeed, percent);
     MotorsVertical.setVelocity(ySpeed, percent);
