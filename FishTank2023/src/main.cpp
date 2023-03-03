@@ -22,34 +22,39 @@
 
 #include "math.h"
 #include "vex.h"
+#include <cmath>
 
 //#include "VisionSensor.h"
 
 using namespace vex;
-int collisionRange = 300;
-int stopRange = 200;
-int maxSpeed = 25;
-float incrementAmount = 0.5;
+int collisionRange = 600;
+int stopRange = 300;
+int maxSpeed = 20;
+int snapshotBuffer = 100;
+float incrementMod = 0.5;
 float xSpeed = 0;
 float ySpeed = 0;
 
 float map(float inputValue, float a1, float a2, float b1, float b2) {
   float output = b1 + (((inputValue - a1) * (b2 - b1)) / (a2 - a1));
   return output;
+  // maps one value in a range to its corresponding value in another range
 }
 
 float fishX() {
-  VisionSensor.takeSnapshot(VisionSensor__FISH);
+  // VisionSensor.takeSnapshot(VisionSensor__FISH);
   float x =
       map(VisionSensor.largestObject.centerX, 90, 240, -maxSpeed, maxSpeed);
   return x;
+  // outputs the fishes x value, ranges from negative max speed to max speed
 }
 
 float fishY() {
-  VisionSensor.takeSnapshot(VisionSensor__FISH);
+  // VisionSensor.takeSnapshot(VisionSensor__FISH);
   float y =
       map(VisionSensor.largestObject.centerY, 185, 40, -maxSpeed, maxSpeed);
   return y;
+  // outputs the fishes y value, ranges from negative max speed to max speed
 }
 
 float depthCollision(float ySpeed) {
@@ -57,7 +62,7 @@ float depthCollision(float ySpeed) {
       (RangeBack.distance(mm) < stopRange && ySpeed < 0)*/) {
     return 0;
   }
-  // set speed to 0 if within 10cm of wall
+  // set speed to 0 if within stop range of wall
 
   else if (ySpeed > 0 && RangeFront.distance(mm) <= collisionRange) {
 
@@ -66,12 +71,12 @@ float depthCollision(float ySpeed) {
   // if front gets within the collision distance, the speed gets slower as it
   // approaches.
 
-  /*else if (ySpeed < 0 && RangeBack.distance(mm) <= collisionRange) {
+  else if (ySpeed < 0 && RangeBack.distance(mm) <= collisionRange) {
 
     return ySpeed * (map(RangeBack.distance(mm), 0, collisionRange, 0, 1));
-  }*/
+  }
   // if back gets within the collision distance, the speed gets slower as it
-  // approaches.
+  // approaches
 
   else {
     return ySpeed;
@@ -79,21 +84,25 @@ float depthCollision(float ySpeed) {
 }
 
 float widthCollision(float xSpeed) {
-  if ((RangeRight.distance(mm) < 100 && xSpeed > 0) ||
-      ((RangeLeft.distance(mm) < 100) && xSpeed < 0)) {
+  if ((RangeRight.distance(mm) < stopRange && xSpeed > 0) ||
+      ((RangeLeft.distance(mm) < stopRange) && xSpeed < 0)) {
     return 0;
   }
-  // set speed to 0 if within 10cm of wall
+  // set speed to 0 if within stop range of wall
 
   else if (xSpeed > 0 && RangeRight.distance(mm) <= collisionRange) {
 
     return xSpeed * (map(RangeRight.distance(mm), 0, collisionRange, 0, 1));
   }
+  // if right gets within the collision distance, the speed gets slower as it
+  // approaches
 
   else if (xSpeed < 0 && RangeLeft.distance(mm) <= collisionRange) {
 
     return xSpeed * (map(RangeLeft.distance(mm), 0, collisionRange, 0, 1));
   }
+  // if left gets within the collision distance, the speed gets slower as it
+  // approaches
 
   else {
     return xSpeed;
@@ -103,27 +112,43 @@ float widthCollision(float xSpeed) {
 int main() {
   // Initializing Robot Configuration. DO NOT REMOVE!
   vexcodeInit();
+  MotorsHorizontal.spin(forward);
+  MotorsVertical.spin(forward);
 
+  
   while (true) {
+    // int millisTimer = (Brain.Timer.value() * 1000);
+    // if (millisTimer % snapshotBuffer == 0) {
     VisionSensor.takeSnapshot(VisionSensor__FISH);
+    //}
 
-    if (xSpeed < fishX()) {
-      xSpeed = xSpeed + incrementAmount;
+    float xDiff = fishX() - xSpeed;
+    float yDiff = fishY() - ySpeed;
+    // difference between where the target speed is and the current speed
 
-    } else if (xSpeed > fishX()) {
-      xSpeed = xSpeed - incrementAmount;
+    if (fabs((1 / xDiff) * incrementMod) > fabs(fishX())) {
+      xSpeed = fishX();
+      // if the amount it would incrament is larger than the target speed,
+      // current speed is set to target speed
+    } else {
+      xSpeed += ((1 / xDiff) * incrementMod);
+      // as the current speed gets closer to the target speed, the rate of
+      // acceleration increases
     }
 
-    if (ySpeed < fishY()) {
-      ySpeed = ySpeed + incrementAmount;
-
-    } else if (ySpeed > fishY()) {
-      ySpeed = ySpeed - incrementAmount;
+    if (fabs((1 / yDiff) * incrementMod) > fabs(fishY())) {
+      ySpeed = fishY();
+      // if the amount it would incrament is larger than the target speed,
+      // current speed is set to target speed
+    } else {
+      ySpeed += ((1 / yDiff) * incrementMod);
+      // as the current speed gets closer to the target speed, the rate of
+      // acceleration increases
     }
+     MotorsHorizontal.setVelocity(widthCollision(xSpeed), percent);
+     MotorsVertical.setVelocity(depthCollision(ySpeed), percent);
 
-    MotorsHorizontal.setVelocity(xSpeed, percent);
-    MotorsVertical.setVelocity(ySpeed, percent);
-    MotorsHorizontal.spin(forward);
-    MotorsVertical.spin(forward);
+   
+   
   }
 }
