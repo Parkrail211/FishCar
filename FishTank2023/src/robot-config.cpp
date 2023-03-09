@@ -8,19 +8,19 @@ using code = vision::code;
 brain  Brain;
 
 // VEXcode device constructors
-motor MotorsHorizontalMotorA = motor(PORT13, ratio18_1, false);
-motor MotorsHorizontalMotorB = motor(PORT15, ratio18_1, true);
-motor_group MotorsHorizontal = motor_group(MotorsHorizontalMotorA, MotorsHorizontalMotorB);
-motor MotorsVerticalMotorA = motor(PORT14, ratio18_1, false);
-motor MotorsVerticalMotorB = motor(PORT16, ratio18_1, true);
+motor MotorsVerticalMotorA = motor(PORT16, ratio18_1, true);
+motor MotorsVerticalMotorB = motor(PORT15, ratio18_1, false);
 motor_group MotorsVertical = motor_group(MotorsVerticalMotorA, MotorsVerticalMotorB);
+motor MotorsHorizontalMotorA = motor(PORT14, ratio18_1, false);
+motor MotorsHorizontalMotorB = motor(PORT13, ratio18_1, true);
+motor_group MotorsHorizontal = motor_group(MotorsHorizontalMotorA, MotorsHorizontalMotorB);
 sonar RangeFront = sonar(Brain.ThreeWirePort.C);
 controller Controller1 = controller(primary);
 sonar RangeBack = sonar(Brain.ThreeWirePort.G);
 sonar RangeRight = sonar(Brain.ThreeWirePort.E);
 /*vex-vision-config:begin*/
-signature VisionSensor__FISH = signature (1, 2521, 6089, 4305, -2415, -1143, -1779, 1.4, 0);
-vision VisionSensor = vision (PORT3, 79, VisionSensor__FISH);
+signature VisionSensor__FISH = signature (1, 2283, 2721, 2502, -841, -591, -716, 5.6, 0);
+vision VisionSensor = vision (PORT6, 116, VisionSensor__FISH);
 /*vex-vision-config:end*/
 sonar RangeLeft = sonar(Brain.ThreeWirePort.A);
 

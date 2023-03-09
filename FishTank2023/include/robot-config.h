@@ -5,8 +5,8 @@ extern brain Brain;
 using signature = vision::signature;
 
 // VEXcode devices
-extern motor_group MotorsHorizontal;
 extern motor_group MotorsVertical;
+extern motor_group MotorsHorizontal;
 extern sonar RangeFront;
 extern controller Controller1;
 extern sonar RangeBack;

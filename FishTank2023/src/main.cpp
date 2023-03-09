@@ -1,3 +1,219 @@
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsVertical       motor_group   16, 15          
+// MotorsHorizontal     motor_group   14, 13          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsVertical       motor_group   16, 15          
+// MotorsHorizontal     motor_group   14, 13          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsVertical       motor_group   16, 15          
+// MotorsHorizontal     motor_group   14, 13          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsVertical       motor_group   16, 15          
+// MotorsHorizontal     motor_group   14, 13          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsVertical       motor_group   16, 15          
+// MotorsHorizontal     motor_group   14, 13          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsV              motor_group   16, 15          
+// MotorsHorizontal     motor_group   14, 13          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsV              motor_group   16, 15          
+// MotorsVertical       motor_group   14, 13          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   16, 15          
+// MotorsVertical       motor_group   14, 13          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   16, 15          
+// MotorsVertical       motor_group   14, 13          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   5, 15           
+// MotorsVertical       motor_group   14, 13          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   5, 15           
+// MotorsVertical       motor_group   14, 10          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   13, 15          
+// MotorsVertical       motor_group   14, 10          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   13, 15          
+// MotorsVertical       motor_group   14, 16          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   13, 15          
+// MotorsVertical       motor_group   14, 16          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   13, 15          
+// MotorsVertical       motor_group   14, 16          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   13, 15          
+// MotorsVertical       motor_group   14, 16          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   13, 15          
+// MotorsVertical       motor_group   14, 16          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// MotorsHorizontal     motor_group   13, 15          
+// MotorsVertical       motor_group   14, 16          
+// RangeFront           sonar         C, D            
+// Controller1          controller                    
+// RangeBack            sonar         G, H            
+// RangeRight           sonar         E, F            
+// VisionSensor         vision        6               
+// RangeLeft            sonar         A, B            
+// ---- END VEXCODE CONFIGURED DEVICES ----
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
@@ -58,8 +274,8 @@ float fishY() {
 }
 
 float depthCollision(float ySpeed) {
-  if ((RangeFront.distance(mm) < stopRange && ySpeed > 0) /*||
-      (RangeBack.distance(mm) < stopRange && ySpeed < 0)*/) {
+  if ((RangeFront.distance(mm) < stopRange && ySpeed > 0) ||
+      (RangeBack.distance(mm) < stopRange && ySpeed < 0)) {
     return 0;
   }
   // set speed to 0 if within stop range of wall
@@ -147,6 +363,7 @@ int main() {
     }
      MotorsHorizontal.setVelocity(widthCollision(xSpeed), percent);
      MotorsVertical.setVelocity(depthCollision(ySpeed), percent);
+     
 
    
    
